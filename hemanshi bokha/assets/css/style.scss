@@ -1,0 +1,330 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1140px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.align-items-center{
+    align-items: center;
+}
+.justify-content{
+    justify-content: space-between;
+}
+.justify-center{
+    justify-content: center;
+}
+.height{
+    height: 100vh;
+}
+header ul li{
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    font-family: 'Poppins';
+}
+// .w-33{
+//     width: 33%;
+// }
+// .w-25{
+//     width: 25%;
+// }
+// .w-50{
+//     width: 48%;
+// }
+$white: #ffffff;
+$black: #000000;
+$skiny: #bfa27e;
+$bg-color:#0A1113;
+$golden:#BFA27E;
+$grey:#737373;
+
+@mixin p{
+    font-size: 16px;
+    color: $grey;
+    padding: 25px 0;
+}
+@mixin h2{
+    color: $golden;
+    font-weight: 500;
+    font-size: 30px;
+}
+@mixin h5{
+    color: $white;
+    font-size: 20px;
+    font-weight: 500;
+}
+@mixin h6{
+    color: $skiny;
+    font-size: 15px;
+    font-weight: 500;
+}
+section .banner{
+    background-image: url(../img/slider-2.jpg);
+    background-size: cover;
+    header{
+        padding: 30px 0 0 0;
+        .menu{
+            ul{
+                li{
+                    padding: 0 15px;
+                    color: $white;
+
+                }
+            }
+        }
+        .icon{
+            ul{
+                li{
+                    padding: 0 15px;
+                    color: $white;
+                }
+            }
+        }
+        .toggle{
+            color: $white;
+        }
+    }
+    .banner-content{
+        text-align: center;
+        h2{
+           font-size: 100px; 
+           color: $white;
+           font-weight: 500;
+           font-family:'Times New Roman', Times, serif;
+        }
+        p{
+            padding: 10px 0;
+            font-size: 18px;
+            color: $white;
+        }
+        button{
+            height: 40px;
+            width: 150px;
+            background-color: $skiny;
+            border: none;
+            color: $white;
+            transition: all 0.5s;
+            margin-top: 10px;
+        }
+        button:hover{
+            background-color: $black;
+        }
+    }
+}
+.restaurant{
+    padding: 30px 100px;
+    text-align: center;
+    background-color: $bg-color;
+    h2{
+       @include h2
+    }
+    p{
+        @include p;
+    }
+    button{
+        height: 40px;
+        width: 150px;
+        border: 1px solid $skiny;
+        color: $white;
+        transition: all 0.5s;
+        margin-top: 10px;
+        background-color: transparent;
+    }
+    button:hover{
+        background-color: $skiny;
+    }
+}
+.specialties .banner{
+    background-image: url(../img/back-1.jpg); 
+    padding: 200px 0;
+
+    .content{
+        h2{
+            @include h2;
+        }   
+        p{
+            font-size: 18px;
+            color: $grey;
+            padding: 10px 0;
+        }
+    }
+}
+.dishes{
+    background-color: $bg-color;
+    text-align: center;
+    padding: 40px 0;
+    .img{
+        padding: 10px;
+        margin: 20px 10px;
+        transition: all 0.3s;
+        h5{
+            @include h5;
+        }
+        h6{
+            @include h6;
+            padding: 7px 0
+        }
+    }
+    .img:hover{
+        box-shadow: 2px 1px 5px 2px $golden;
+    }
+    h2{
+        @include h2;
+        padding: 10px 0;
+    }   
+     p{
+         font-size: 18px;
+         color: $grey;
+         padding: 10px 0;
+    }
+}
+.customer-think{
+    padding: 100px 30px;
+    background-color: $bg-color;
+    h2{
+        font-size: 90px;
+        color: #bfa27e49;
+        font-weight: 500;
+        font-family:'Times New Roman', Times, serif;
+    }
+    .imgs{
+       border: 1px solid $golden;
+       padding: 20px;
+    }
+    .content{
+        color: $white;
+        text-align: center;
+        h5{
+            color: $golden;
+            font-size: 30px;
+            font-weight: 500;
+            padding: 15px 0;
+            font-family:'Times New Roman', Times, serif;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+}
+.SOURCE-OF-FRESH-INGREDIENTS .banner{
+        background-image: url(../img/back-2.jpg);
+        padding: 300px 0;
+       .content{
+         position: absolute;
+         right: 20px;
+        h2{
+            color: $golden;
+            font-size: 30px;
+            font-weight: 500;
+        }
+        p{
+            color: $white;
+            padding: 25px 0;
+            font-size: 18px;
+        }
+        button{
+            height: 50px;
+            width: 150px;
+            border: 1px solid $golden;
+            background-color: transparent;
+            color: $white;
+            transition: all 0.5s;
+        }
+        button:hover{
+            background-color: $golden;
+        }
+       }
+}
+.updates{
+    text-align: center;
+    background-color: $bg-color;
+    padding: 80px 0;
+    h2{
+      color: $golden;
+      padding: 10px 0;
+      font-size: 30px;
+      font-weight: 500;
+    }
+    p{
+      color: $grey;
+      padding-bottom: 20px;
+    }
+    .w-50{
+        h5{
+            color: $golden;
+            font-size: 27px;
+            font-weight: 500;
+            padding: 10px 0;
+            font-family:'Times New Roman', Times, serif;
+        }
+        P{
+            font-size: 17PX;
+        }
+    }
+}
+footer{
+    background-color: $black;
+    padding: 50px 0;
+    img{
+        padding: 50px 0 20px 0;
+    }
+    ul{
+        li{
+            list-style: none;
+            color: $grey;
+            padding: 7px 0;
+        }
+    }
+    .w-33{
+       .content{
+        text-align: center;
+        h5{
+            color: $golden;
+            font-size: 18px;
+            border: 1px solid $golden;
+            padding: 20px;
+            transition: all 0.5s;
+        }
+        h5:hover{
+            color: $white;
+            background-color: $golden;
+        }
+        h6{
+            color: $grey;
+            font-size: 20px;
+            padding-top: 20px;
+        }
+       }
+    }
+}
+.last{
+    border-top: 1px solid $golden;
+    padding: 20px 0;
+    background-color: $black;
+    color: $white;
+    text-align: center;
+}
+.top{
+    padding: 20px;
+    background-color: $golden;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+}
+
+.xs-1,.xs-2,.xs-3,.xs-4,.xs-5,.xs-6,.xs-7,.xs-8,.xs-9,.xs-10,.xs-11,.xs-12,.sm-1,.sm-2,.sm-3,.sm-4,.sm-5,.sm-6,.sm-7,.sm-8,.sm-9,.sm-10,.sm-11,.sm-12,.md-1,.md-2,.md-3,.md-4,.md-5,.md-6,.md-7,.md-8,.md-9,.md-10,.md-11,.md-12,.lg-1,.lg-2,.lg-3,.lg-4,.lg-5,.lg-6,.lg-7,.lg-8,.lg-9,.lg-10,.lg-11,.lg-12,.xl-1,.xl-2,.xl-3,.xl-4,.xl-5,.xl-6,.xl-7,.xl-8,.xl-9,.xl-10,.xl-11,.xl-12,.xxl-1,.xxl-2,.xxl-3,.xxl-4,.xxl-5,.xxl-6,.xxl-7,.xxl-8,.xxl-9,.xxl-10,.xxl-11,.xxl-12 {
+   padding:12px;
+}
+.hemanshi .bokha{
+   padding: 20px;
+   background-color: palevioletred;
+}
